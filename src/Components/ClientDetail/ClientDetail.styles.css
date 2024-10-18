@@ -1,0 +1,10 @@
+.detailCard {
+  border-style: solid;
+  background-color: aquamarine;
+  width: 600px;
+}
+
+.address {
+  display: flex;
+  flex-direction: column;
+}
