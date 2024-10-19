@@ -83,7 +83,6 @@ type SecurityLevel = {
   name: string;
 };
 
-// Define the main Client type based on the API response structure
 export type Client = {
   id: number;
   name: string;
@@ -139,3 +138,7 @@ export type Client = {
   }[];
   _version: number;
 };
+
+export interface ClientListProps {
+  clients: Client[];
+}

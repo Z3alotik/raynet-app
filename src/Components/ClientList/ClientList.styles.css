@@ -1,6 +1,7 @@
 table {
-  width: 100%;
+  width: 70%;
   border-collapse: collapse;
+  margin: 25px;
 }
 th,
 td {
@@ -15,4 +16,10 @@ th {
 
 tr:hover {
   background-color: #f1f1f1;
+}
+
+.main {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
 }

@@ -1,8 +1,18 @@
-function Header() {
+import { HeaderProps } from "./Header.types";
+import "./Header.styles.css";
+
+function Header({ searchQuery, setSearchQuery }: HeaderProps) {
   return (
-    <div className="App">
-      <header>Klienti</header>
-      <input type="text" placeholder="Hledej..." />
+    <div className="Header">
+      <header>
+        <h1>Klienti</h1>
+      </header>
+      <input
+        type="text"
+        placeholder="Hledej..."
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+      />
     </div>
   );
 }
