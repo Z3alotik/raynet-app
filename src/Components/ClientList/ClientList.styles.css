@@ -5,17 +5,17 @@ table {
 }
 th,
 td {
-  border: 1px solid #ddd;
+  border: 1px solid #dddddd;
   padding: 8px;
   text-align: left;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #0cd5fe;
 }
 
 tr:hover {
-  background-color: #f1f1f1;
+  background-color: #a2f683;
 }
 
 .main {

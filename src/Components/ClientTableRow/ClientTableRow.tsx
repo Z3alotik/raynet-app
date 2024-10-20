@@ -1,8 +1,18 @@
 import { ClientTableRowProps } from "./ClientTableRow.types";
+import "./ClientTableRow.styles.css";
 
-function ClientTableRow({ client, handleSelectClient }: ClientTableRowProps) {
+function ClientTableRow({
+  client,
+  handleSelectClient,
+  selectedClient,
+}: ClientTableRowProps) {
   return (
-    <tr onClick={() => handleSelectClient(client)} className="item">
+    <tr
+      onClick={() => handleSelectClient(client)}
+      className={
+        selectedClient && selectedClient.id === client.id ? "selected-row" : ""
+      }
+    >
       <td>{client.name}</td>
       <td>{client.state}</td>
       <td>{client.role}</td>

@@ -5,7 +5,7 @@ import { Client, ClientListProps } from "./ClientList.types";
 import ClientTableRow from "../ClientTableRow/ClientTableRow";
 
 function ClientList({ clients }: ClientListProps) {
-  const [selectedClient, setSelectedClient] = useState<Client | null>();
+  const [selectedClient, setSelectedClient] = useState<Client | null>(null);
 
   const handleSelectClient = (client: Client) => {
     if (selectedClient && selectedClient.id === client.id) {
@@ -36,7 +36,9 @@ function ClientList({ clients }: ClientListProps) {
               clients.map((client) => (
                 <ClientTableRow
                   client={client}
+                  selectedClient={selectedClient}
                   handleSelectClient={handleSelectClient}
+                  key={client.id}
                 />
               ))
             ) : (
