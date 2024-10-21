@@ -6,20 +6,20 @@ type Address = {
   province: string;
   street: string;
   zipCode: string;
-  lat?: number; // Optional, as it can be null
-  lng?: number; // Optional, as it can be null
+  lat?: number;
+  lng?: number;
 };
 
 type ContactInfo = {
   email: string;
-  email2?: string; // Optional, as it can be null
+  email2?: string;
   primary: boolean;
   tel1: string;
   tel1Type: string;
-  tel2?: string; // Optional, as it can be null
-  tel2Type?: string; // Optional, as it can be null
-  www?: string; // Optional, as it can be null
-  otherContact?: string; // Optional, as it can be null
+  tel2?: string;
+  tel2Type?: string;
+  www?: string;
+  otherContact?: string;
 };
 
 type PrimaryAddress = {
@@ -32,7 +32,7 @@ type PrimaryAddress = {
     value: string;
   };
   contactInfo: ContactInfo;
-  extIds?: any; // Optional, as it can be null
+  extIds?: any;
 };
 
 type ContactAddress = {
@@ -45,7 +45,7 @@ type ContactAddress = {
     value: string;
   };
   contactInfo: ContactInfo;
-  extIds?: any; // Optional, as it can be null
+  extIds?: any;
 };
 
 type Category = {
@@ -86,10 +86,10 @@ type SecurityLevel = {
 export type Client = {
   id: number;
   name: string;
-  titleBefore?: string | null; // Optional, as it can be null
-  firstName?: string | null; // Optional, as it can be null
-  lastName?: string | null; // Optional, as it can be null
-  titleAfter?: string | null; // Optional, as it can be null
+  titleBefore?: string | null;
+  firstName?: string | null;
+  lastName?: string | null;
+  titleAfter?: string | null;
   person: boolean;
   role: string;
   state: string;
@@ -100,11 +100,11 @@ export type Client = {
   };
   regNumber: string;
   taxNumber: string;
-  taxNumber2?: string | null; // Optional, as it can be null
+  taxNumber2?: string | null;
   taxPayer: string;
-  bankAccount?: string | null; // Optional, as it can be null
-  databox?: string | null; // Optional, as it can be null
-  court?: string | null; // Optional, as it can be null
+  bankAccount?: string | null;
+  databox?: string | null;
+  court?: string | null;
   primaryAddress: PrimaryAddress;
   contactAddress: ContactAddress;
   category: Category;
@@ -115,23 +115,23 @@ export type Client = {
   companyClassification3: CompanyClassification;
   paymentTerm: PaymentTerm;
   contactSource: ContactSource;
-  birthday?: string | null; // Optional, as it can be null
-  notice?: string | null; // Optional, as it can be null
-  tags: string[]; // Assuming tags are an array of strings
-  customFields?: any; // Optional, as it can be null
+  birthday?: string | null;
+  notice?: string | null;
+  tags: string[];
+  customFields?: any;
   rowInfo: {
-    createdAt: string; // Date string
-    createdBy: string; // Email or username
-    updatedAt: string; // Date string
-    updatedBy: string; // Email or username
-    rowAccess?: any; // Optional, as it can be null
-    rowState?: any; // Optional, as it can be null
+    createdAt: string;
+    createdBy: string;
+    updatedAt: string;
+    updatedBy: string;
+    rowAccess?: any;
+    rowState?: any;
   };
   securityLevel: SecurityLevel;
   inlineGdpr: {
     id: number;
-    validFrom: string; // Date string
-    validTill: string; // Date string
+    validFrom: string;
+    validTill: string;
     legalTitle: string;
     templateName: string;
     gdprTemplate: number;
