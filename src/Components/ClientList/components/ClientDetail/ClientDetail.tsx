@@ -1,7 +1,7 @@
 import { ClientDetailType } from "./ClientDetail.types";
 import "./ClientDetail.styles.css";
 
-function ClientDetail({ selectedClient }: ClientDetailType) {
+const ClientDetail = ({ selectedClient }: ClientDetailType) => {
   return (
     <div className="detail-card">
       <header className="detail-header">
@@ -40,6 +40,6 @@ function ClientDetail({ selectedClient }: ClientDetailType) {
       </div>
     </div>
   );
-}
+};
 
 export default ClientDetail;

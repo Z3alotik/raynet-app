@@ -1,11 +1,11 @@
 import { ClientTableRowProps } from "./ClientTableRow.types";
 import "./ClientTableRow.styles.css";
 
-function ClientTableRow({
+const ClientTableRow = ({
   client,
   handleSelectClient,
   selectedClient,
-}: ClientTableRowProps) {
+}: ClientTableRowProps) => {
   return (
     <tr
       onClick={() => handleSelectClient(client)}
@@ -23,6 +23,6 @@ function ClientTableRow({
       <td>{client.category.value}</td>
     </tr>
   );
-}
+};
 
 export default ClientTableRow;

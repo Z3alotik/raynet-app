@@ -6,7 +6,7 @@ const INSTANCE_NAME = process.env.REACT_APP_INSTANCE_NAME || "";
 const USER = process.env.REACT_APP_USER || "";
 const BASE_URL = process.env.BASE_URL;
 
-export const useFetchClients = (searchQuery: string) => {
+const useFetchClients = (searchQuery: string) => {
   const [clients, setClients] = useState<Client[]>([]);
   const [loading, setLoading] = useState(false);
 
@@ -42,3 +42,5 @@ export const useFetchClients = (searchQuery: string) => {
     loading,
   };
 };
+
+export default useFetchClients;

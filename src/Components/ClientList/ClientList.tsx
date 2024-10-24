@@ -1,19 +1,11 @@
-import { useState } from "react";
 import "./ClientList.styles.css";
 import ClientDetail from "./components/ClientDetail/ClientDetail";
-import { Client, ClientListProps } from "./ClientList.types";
+import { ClientListProps } from "./ClientList.types";
 import ClientTableRow from "./components/ClientTableRow/ClientTableRow";
+import useClientList from "./useClientList";
 
-function ClientList({ clients }: ClientListProps) {
-  const [selectedClient, setSelectedClient] = useState<Client | null>(null);
-
-  const handleSelectClient = (client: Client) => {
-    if (selectedClient && selectedClient.id === client.id) {
-      setSelectedClient(null);
-    } else {
-      setSelectedClient(client);
-    }
-  };
+const ClientList = ({ clients }: ClientListProps) => {
+  const { handleSelectClient, selectedClient } = useClientList();
 
   return (
     <>
@@ -52,6 +44,6 @@ function ClientList({ clients }: ClientListProps) {
       </div>
     </>
   );
-}
+};
 
 export default ClientList;

@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import ClientList from "./Components/ClientList/ClientList";
 import Header from "./Components/Header/Header";
-import { useFetchClients } from "./hooks/useFetchClients";
+import useFetchClients from "./hooks/useFetchClients";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState<string>("");

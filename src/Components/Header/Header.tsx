@@ -1,7 +1,7 @@
 import { HeaderProps } from "./Header.types";
 import "./Header.styles.css";
 
-function Header({ searchQuery, setSearchQuery }: HeaderProps) {
+const Header = ({ searchQuery, setSearchQuery }: HeaderProps) => {
   return (
     <div className="Header">
       <header>
@@ -15,6 +15,6 @@ function Header({ searchQuery, setSearchQuery }: HeaderProps) {
       />
     </div>
   );
-}
+};
 
 export default Header;
