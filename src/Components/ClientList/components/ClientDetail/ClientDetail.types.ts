@@ -1,4 +1,4 @@
-import { Client } from "../ClientList/ClientList.types";
+import { Client } from "../../ClientList.types";
 
 export interface ClientDetailType {
   selectedClient: Client;

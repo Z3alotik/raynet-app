@@ -1,8 +1,8 @@
 import { useState } from "react";
 import "./ClientList.styles.css";
-import ClientDetail from "../ClientDetail/ClientDetail";
+import ClientDetail from "./components/ClientDetail/ClientDetail";
 import { Client, ClientListProps } from "./ClientList.types";
-import ClientTableRow from "../ClientTableRow/ClientTableRow";
+import ClientTableRow from "./components/ClientTableRow/ClientTableRow";
 
 function ClientList({ clients }: ClientListProps) {
   const [selectedClient, setSelectedClient] = useState<Client | null>(null);
